@@ -13,3 +13,4 @@ class LogParser:
             return lines_with_string
         else:
             raise NoFileFound()
+            
