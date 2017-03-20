@@ -24,9 +24,10 @@ class InputFileValidator(AbstractValidator):
     def validate(self):
         if not self._is_string():
             raise NotAString()
-        if not self._file_exist():
+        elif not self._file_exist():
             raise NotSuchFile()
-
+        else:
+            return True
     def _is_string(self):
         return isinstance(self.filename, str)
 
